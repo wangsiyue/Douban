@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- sql映射文件，作用是将java类与数据库的表通过SQL映射文件关联起来 -->
+
+<mapper namespace="com.yc.mapper.BookTypeMapper">
+
+	<!-- 内容：通常就是对数据库增删改查的sql语句 -->
+
+<!-- 配置二级缓存 -->
+	<!-- <cache></cache> -->
+
+	<select id="getBook" resultType="com.yc.bean.BookType" parameterType="com.yc.bean.BookType">
+		select typeid,typename from Booktype where typeid=#{typeid}
+	</select>
+	
+	<select id="getAllBookTypes" resultType="com.yc.bean.BookType" parameterType="com.yc.bean.BookType">
+		select typeid,typename from Booktype
+	</select>
+	
+	
+
+
+
+
+
+
+</mapper>

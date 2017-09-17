@@ -1,0 +1,26 @@
+2017-02-26 10:38:53  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@25753d: startup date [Sun Feb 26 10:38:53 CST 2017]; root of context hierarchy
+2017-02-26 10:38:53  [ main:53 ] - [ INFO ]  Loading XML bean definitions from class path resource [beans.xml]
+2017-02-26 10:38:54  [ main:1050 ] - [ INFO ]  Loading properties file from URL [file:/E:/workspaceLydia/douban1/target/classes/db.properties]
+2017-02-26 10:38:55  [ main:1494 ] - [ INFO ]  Loaded JDBC driver: oracle.jdbc.driver.OracleDriver
+2017-02-26 10:38:55  [ main:1991 ] - [ WARN ]  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDaoMybatisImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\workspaceLydia\douban1\target\classes\com\yc\mapper\BookMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 49; columnNumber: 25; 在实体引用中, 实体名称必须紧跟在 '&' 后面。
+2017-02-26 10:40:28  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@25753d: startup date [Sun Feb 26 10:40:28 CST 2017]; root of context hierarchy
+2017-02-26 10:40:28  [ main:48 ] - [ INFO ]  Loading XML bean definitions from class path resource [beans.xml]
+2017-02-26 10:40:29  [ main:424 ] - [ INFO ]  Loading properties file from URL [file:/E:/workspaceLydia/douban1/target/classes/db.properties]
+2017-02-26 10:40:29  [ main:597 ] - [ INFO ]  Loaded JDBC driver: oracle.jdbc.driver.OracleDriver
+2017-02-26 10:40:29  [ main:941 ] - [ WARN ]  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDaoMybatisImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\workspaceLydia\douban1\target\classes\com\yc\mapper\BookMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 49; columnNumber: 24; 在实体引用中, 实体名称必须紧跟在 '&' 后面。
+2017-02-26 10:42:24  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1341183: startup date [Sun Feb 26 10:42:24 CST 2017]; root of context hierarchy
+2017-02-26 10:42:24  [ main:44 ] - [ INFO ]  Loading XML bean definitions from class path resource [beans.xml]
+2017-02-26 10:42:25  [ main:510 ] - [ INFO ]  Loading properties file from URL [file:/E:/workspaceLydia/douban1/target/classes/db.properties]
+2017-02-26 10:42:25  [ main:680 ] - [ INFO ]  Loaded JDBC driver: oracle.jdbc.driver.OracleDriver
+2017-02-26 10:42:47  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@25753d: startup date [Sun Feb 26 10:42:47 CST 2017]; root of context hierarchy
+2017-02-26 10:42:47  [ main:46 ] - [ INFO ]  Loading XML bean definitions from class path resource [beans.xml]
+2017-02-26 10:42:47  [ main:443 ] - [ INFO ]  Loading properties file from URL [file:/E:/workspaceLydia/douban1/target/classes/db.properties]
+2017-02-26 10:42:47  [ main:624 ] - [ INFO ]  Loaded JDBC driver: oracle.jdbc.driver.OracleDriver
+2017-02-26 10:43:11  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@25753d: startup date [Sun Feb 26 10:43:11 CST 2017]; root of context hierarchy
+2017-02-26 10:43:11  [ main:60 ] - [ INFO ]  Loading XML bean definitions from class path resource [beans.xml]
+2017-02-26 10:43:12  [ main:455 ] - [ INFO ]  Loading properties file from URL [file:/E:/workspaceLydia/douban1/target/classes/db.properties]
+2017-02-26 10:43:12  [ main:635 ] - [ INFO ]  Loaded JDBC driver: oracle.jdbc.driver.OracleDriver
+2017-02-26 10:43:29  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@25753d: startup date [Sun Feb 26 10:43:29 CST 2017]; root of context hierarchy
+2017-02-26 10:43:29  [ main:49 ] - [ INFO ]  Loading XML bean definitions from class path resource [beans.xml]
+2017-02-26 10:43:29  [ main:438 ] - [ INFO ]  Loading properties file from URL [file:/E:/workspaceLydia/douban1/target/classes/db.properties]
+2017-02-26 10:43:29  [ main:690 ] - [ INFO ]  Loaded JDBC driver: oracle.jdbc.driver.OracleDriver

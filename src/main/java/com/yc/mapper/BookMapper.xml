@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- sql映射文件，作用是将java类与数据库的表通过SQL映射文件关联起来 -->
+
+<mapper namespace="com.yc.mapper.BookMapper">
+
+	<!-- 内容：通常就是对数据库增删改查的sql语句 -->
+
+	<!-- 配置二级缓存 -->
+	<cache></cache>
+
+	<!-- 显示两个表的内容要用resultMap -->
+	<select id="getAllBooks" resultType="com.yc.bean.Book"
+		parameterType="com.yc.bean.Book" resultMap="BookResultMap">
+		select
+		bookid,ISBN,name,author,price,typename,b.typeid,description,pdfs
+		from Book b inner join
+		bookType bt on b.typeid=bt.typeid
+	</select>
+	
+	<select id="getBookByBookType" resultType="com.yc.bean.Book"
+		parameterType="com.yc.bean.Book" resultMap="BookResultMap">
+		select
+		bookid,ISBN,name,author,price,typename,b.typeid,description,pdfs
+		from Book b inner join
+		bookType bt on b.typeid=bt.typeid
+		where b.typeid=#{bookType.typeid}
+	</select>
+
+	<select id="getBook" resultType="com.yc.bean.Book"
+		parameterType="com.yc.bean.Book"  resultMap="BookResultMap">
+		select bookid,ISBN,name,author,price,typename,b.typeid,description,pdfs
+		from Book b inner join bookType bt on b.typeid=bt.typeid where
+		bookid=#{bookid}
+	</select>
+
+	<insert id="saveBook" parameterType="com.yc.bean.Book" useGeneratedKeys="true" keyProperty="bookid">
+		insert into book (ISBN,name,author,price,typeid,description,pdfs)
+		values (#{ISBN},#{name},#{author},#{price},#{bookType.typeid},#{description},#{pdfs})
+			
+		
+	</insert>
+
+	<update id="updateBook" parameterType="com.yc.bean.Book">
+		update Book set
+		ISBN=#{ISBN},name=#{name},author=#{author},price=#{price},typeid=#{bookType.typeid},description=#{description}
+		<if test="pdfs!=''">
+			,pdfs=#{pdfs}
+		</if>
+		where bookid=#{bookid}
+	</update>
+
+	<!-- 使用resultMap 映射实体和字段之间的一一对应 -->
+	<resultMap type="Book" id="BookResultMap">
+		<id property="bookid" column="bookid" />
+		<result property="name" column="name" />
+		<result property="ISBN" column="ISBN" />
+		<result property="author" column="author" />
+		<result property="price" column="price" />
+		<result property="description" column="description" />
+		<result property="pdfs" column="pdfs" />
+		<association property="bookType" javaType="BookType">
+			<id property="typeid" column="typeid" />
+			<result property="typename" column="typename" />
+		</association>
+	</resultMap>
+
+
+
+
+</mapper>

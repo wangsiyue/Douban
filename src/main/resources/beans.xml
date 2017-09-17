@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- xml配置 即可多包扫描 和语句注解 混合使用 结合两者 的优点 删除了config 1.自己写的类使用注解(dao,biz controller(servlet)) 
+		2.不是自己写的，第三方框架的类、使用xml配置 3.AOP切面，也可以采用两种方法 a、事物处理 xml b、其他的切面增强 注解 -->
+	<!-- 扫描包 -->
+	<context:component-scan
+		base-package="com.yc.dao,com.yc.dao.impl,
+						com.yc.bean,com.yc.web.controllers,
+						com.yc.biz,com.yc.biz.impl" />
+
+	<!-- 面向切面编程 启用aspect的代理机制 ->面向接口使用jdk的动态代理机制 -->
+	<aop:aspectj-autoproxy />
+
+	<!-- 启用注解解析框架（事务的注解解析） 
+	<tx:annotation-driven transaction-manager="txManager" />-->
+	<!-- 事务管理器，mybatis使用标准的jdbc的事务管理器 -->
+	<bean id="txManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<!-- 由spring提供的事务增强 -->
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<!-- spring只支持方法级的增强，所以这里配置哪些方法要加入事务增强 -->
+        <tx:attributes>
+            <tx:method name="get*" read-only="true"/>
+            <tx:method name="find*" read-only="true"/>
+            <tx:method name="retrieve*" read-only="true"/>
+            <tx:method name="*" read-only="false"/>
+        </tx:attributes>
+    </tx:advice>
+    <!-- 切面配置 -->
+    <aop:config>
+        <aop:pointcut id="fooServiceOperation" expression="execution(* x.y.service.FooService.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="fooServiceOperation"/>
+    </aop:config>
+    <!-- 数据库连接文件db.properties的读取，spring容器启动时，会以流芙蓉方式读取这个db.properties的配置信息 -->
+	<context:property-placeholder location="classpath:db.properties" />
+	<!-- 使用dbcp2配置数据库连接池 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${db.driverClassName}" />
+		<property name="url" value="${db.url}" />
+		<property name="username" value="${db.username}" />
+		<property name="password" value="${db.password}" />
+	</bean>
+
+	<!-- 取得SqlSessionFactory -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configurationProperties">
+			<props>
+				<prop key="logImpl">LOG4J</prop>
+			</props>
+		</property>
+		<!-- 别名的配置 -->
+		<property name="typeAliasesPackage" value="com.yc.bean"></property>
+		<!-- 配置mapper映射文件 -->
+		<property name="mapperLocations" value="classpath*:com/yc/mapper/*.xml"></property>
+	</bean>
+    
+    
+
+</beans>

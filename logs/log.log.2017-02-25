@@ -1,0 +1,36 @@
+2017-02-25 15:54:34  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@156f14c: startup date [Sat Feb 25 15:54:34 CST 2017]; root of context hierarchy
+2017-02-25 15:54:34  [ main:61 ] - [ INFO ]  Loading XML bean definitions from class path resource [beans.xml]
+2017-02-25 15:54:35  [ main:615 ] - [ INFO ]  Loading properties file from URL [file:/E:/workspaceLydia/douban1/target/classes/db.properties]
+2017-02-25 15:54:35  [ main:826 ] - [ INFO ]  Loaded JDBC driver: oracle.jdbc.driver.OracleDriver
+2017-02-25 15:54:36  [ main:1742 ] - [ INFO ]  Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-02-25 15:54:36  [ main:1778 ] - [ INFO ]  SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-02-25 15:55:48  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6250d2: startup date [Sat Feb 25 15:55:48 CST 2017]; root of context hierarchy
+2017-02-25 15:55:48  [ main:73 ] - [ INFO ]  Loading XML bean definitions from class path resource [beans.xml]
+2017-02-25 15:55:49  [ main:557 ] - [ INFO ]  Loading properties file from URL [file:/E:/workspaceLydia/douban1/target/classes/db.properties]
+2017-02-25 15:55:49  [ main:778 ] - [ INFO ]  Loaded JDBC driver: oracle.jdbc.driver.OracleDriver
+2017-02-25 15:55:50  [ main:1646 ] - [ INFO ]  Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-02-25 15:55:50  [ main:1682 ] - [ INFO ]  SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-02-25 15:57:41  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1bd523d: startup date [Sat Feb 25 15:57:41 CST 2017]; root of context hierarchy
+2017-02-25 15:57:41  [ main:52 ] - [ INFO ]  Loading XML bean definitions from class path resource [beans.xml]
+2017-02-25 15:57:42  [ main:490 ] - [ INFO ]  Loading properties file from URL [file:/E:/workspaceLydia/douban1/target/classes/db.properties]
+2017-02-25 15:57:42  [ main:673 ] - [ INFO ]  Loaded JDBC driver: oracle.jdbc.driver.OracleDriver
+2017-02-25 15:57:43  [ main:1500 ] - [ INFO ]  Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-02-25 15:57:43  [ main:1534 ] - [ INFO ]  SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-02-25 16:00:41  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@25753d: startup date [Sat Feb 25 16:00:41 CST 2017]; root of context hierarchy
+2017-02-25 16:00:41  [ main:54 ] - [ INFO ]  Loading XML bean definitions from class path resource [beans.xml]
+2017-02-25 16:00:42  [ main:517 ] - [ INFO ]  Loading properties file from URL [file:/E:/workspaceLydia/douban1/target/classes/db.properties]
+2017-02-25 16:00:42  [ main:745 ] - [ INFO ]  Loaded JDBC driver: oracle.jdbc.driver.OracleDriver
+2017-02-25 19:52:52  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@25753d: startup date [Sat Feb 25 19:52:52 CST 2017]; root of context hierarchy
+2017-02-25 19:52:52  [ main:76 ] - [ INFO ]  Loading XML bean definitions from class path resource [beans.xml]
+2017-02-25 19:52:53  [ main:694 ] - [ INFO ]  Loading properties file from URL [file:/E:/workspaceLydia/douban1/target/classes/db.properties]
+2017-02-25 19:52:53  [ main:927 ] - [ INFO ]  Loaded JDBC driver: oracle.jdbc.driver.OracleDriver
+2017-02-25 19:52:54  [ main:1841 ] - [ INFO ]  Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-02-25 19:52:54  [ main:1886 ] - [ INFO ]  SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-02-25 19:54:19  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@25753d: startup date [Sat Feb 25 19:54:19 CST 2017]; root of context hierarchy
+2017-02-25 19:54:19  [ main:51 ] - [ INFO ]  Loading XML bean definitions from class path resource [beans.xml]
+2017-02-25 19:54:19  [ main:693 ] - [ INFO ]  Loading properties file from URL [file:/E:/workspaceLydia/douban1/target/classes/db.properties]
+2017-02-25 19:54:20  [ main:939 ] - [ INFO ]  Loaded JDBC driver: oracle.jdbc.driver.OracleDriver
+2017-02-25 19:54:57  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@25753d: startup date [Sat Feb 25 19:54:57 CST 2017]; root of context hierarchy
+2017-02-25 19:54:57  [ main:58 ] - [ INFO ]  Loading XML bean definitions from class path resource [beans.xml]
+2017-02-25 19:54:58  [ main:578 ] - [ INFO ]  Loading properties file from URL [file:/E:/workspaceLydia/douban1/target/classes/db.properties]
+2017-02-25 19:54:58  [ main:862 ] - [ INFO ]  Loaded JDBC driver: oracle.jdbc.driver.OracleDriver
